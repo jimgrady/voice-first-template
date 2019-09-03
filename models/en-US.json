@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "voice first template",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "LoadTestStateIntent",
+          "slots": [
+            {
+              "name": "TestStateId",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "load test state {TestStateId}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}

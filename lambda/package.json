@@ -1,0 +1,22 @@
+{
+  "name": "dev-refnet",
+  "version": "0.9.0",
+  "description": "RefNet Christian Radio Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amazon Alexa",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.6.0",
+    "voice-tools": "file:../../voice-tools"
+  },
+  "devDependencies": {
+    "bespoken-tools": "^2.3.14",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "virtual-alexa": "^0.7.2",
+    "ejs": "^2.6.2"
+  }
+}

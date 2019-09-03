@@ -1,0 +1,24 @@
+'use strict';
+try {
+    const config = require('./config/config');
+    const Alexa = require('ask-sdk');
+    const UserDb = require('voice-tools/lib/userdb/dynamodb')(config);
+    const HandlerFactory = require('./handlers/HandlerFactory');
+    exports.handler = Alexa.SkillBuilders.standard()
+        .addRequestHandlers(
+        <% let keys = Object.keys(requestHandlers); for (let i = 0; i < keys.length; i++) { let key = keys[i]; let path = requestHandlers[key]; %>
+            new HandlerFactory('<%-path%>')<%-(i < keys.length - 1 ? ',' : '');%>
+        <% } %>
+        )
+    .addErrorHandlers(
+        <% keys = Object.keys(errorHandlers); for (let i = 0; i < keys.length; i++) { let key = keys[i]; let path = errorHandlers[key]; %>
+        new HandlerFactory('<%-path%>')<%-(i < keys.length - 1 ? ',' : '');%>
+        <% } %>
+    )
+    .withDynamoDbClient(new UserDb())
+        .withTableName(config.userTableName)
+        .withAutoCreateTable(true)
+        .lambda();
+} catch(e) {
+    console.log("LAMBDA SETUP ERROR", e);
+}
