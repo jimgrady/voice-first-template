@@ -9,6 +9,7 @@
         },
         "lambda": [
             {
+                "sourceDir": "lambda",
                 "runtime": "Node.js 10.x"
             }
         ],
