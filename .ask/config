@@ -1,23 +1,33 @@
 {
   "deploy_settings": {
     "default": {
-      "was_cloned": true,
-      "merge": {},
-      "resources": {
+      "skill_id": "",
+      "was_cloned": false,
+      "merge": {
         "manifest": {
-          "eTag": "d5200ed79f83cfd5ff10484841857805"
-        },
-        "lambda": [
-            {
-                "sourceDir": "lambda",
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "voice-first-default",
                 "runtime": "Node.js 10.x"
+              }
             }
-        ],
-        "interactionModel": {
-          "en-US": {
-            "eTag": "739ae60358af678cdf5e87a72b7b150f"
           }
         }
+      },
+      "in_skill_products": [],
+      "resources": {
+        "manifest": {
+          "eTag": ""
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": ""
+          }
+        },
+        "lambda": [
+
+        ]
       }
     }
   }
