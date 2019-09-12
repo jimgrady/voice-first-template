@@ -8,8 +8,7 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "voice-first-default",
-                "runtime": "Node.js 10.x"
+                "uri": "voice-first-default"
               }
             }
           }
