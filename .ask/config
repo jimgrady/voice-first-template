@@ -8,10 +8,7 @@
                     "apis": {
                       "custom": {
                         "endpoint": {
-                        "arn": "arn:aws:lambda:us-east-1:208622040557:function:AlexaGeneric",
-                        "sourceDir": "lambda",
-                                  "uri": "https://evil-lewis-W1AOP1.bespoken.link",
-                                  "sslCertificateType": "Wildcard"
+                        "arn": "arn:aws:lambda:us-east-1:208622040557:function:AlexaGeneric"
                                 }
                       }
                     }
