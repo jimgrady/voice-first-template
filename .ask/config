@@ -18,6 +18,15 @@
         "manifest": {
           "eTag": ""
         },
+        "lambda": [
+                  {
+                    "alexaUsage": [
+                      "custom/default"
+                    ],
+                    "handler": "index.handler",
+                    "runtime": "nodejs10.x"
+                  }
+                ],
         "interactionModel": {
           "en-US": {
             "eTag": ""
