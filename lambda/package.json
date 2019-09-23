@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ask-sdk": "^2.6.0",
+    "node-rest-client-promise": "^3.1.1",
     "voice-tools": "file:../../voice-tools"
   },
   "devDependencies": {

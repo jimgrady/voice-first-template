@@ -3,7 +3,8 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda"
+          "uri": "https://evil-lewis-W1AOP1.bespoken.link",
+          "sslCertificateType": "Wildcard"
         },
         "interfaces": []
       }
@@ -12,7 +13,7 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "name": "Voice First Template"
+          "name": ""
         }
       }
     }
