@@ -3,6 +3,8 @@
     "apis": {
       "custom": {
         "endpoint": {
+          "uri": "https://evil-lewis-W1AOP1.bespoken.link",
+          "sslCertificateType": "Wildcard"
         },
         "interfaces": []
       }
