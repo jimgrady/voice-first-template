@@ -3,7 +3,18 @@
     "default": {
       "skill_id": "",
       "was_cloned": false,
-      "merge": {},
+      "merge": {
+          "manifest": {
+                    "apis": {
+                      "custom": {
+                        "endpoint": {
+                                  "uri": "https://evil-lewis-W1AOP1.bespoken.link",
+                                  "sslCertificateType": "Wildcard"
+                                }
+                      }
+                    }
+                  }
+      },
       "resources": {
         "manifest": {
           "eTag": ""
