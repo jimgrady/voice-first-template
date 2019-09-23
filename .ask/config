@@ -8,8 +8,8 @@
                     "apis": {
                       "custom": {
                         "endpoint": {
-                        "uri": "arn:aws:lambda:us-east-1:208622040557:function:AlexaGeneric"
-                                }
+                            "uri": "voice-first-default"
+                        }
                       }
                     }
                   }
@@ -20,8 +20,6 @@
         },
         "lambda": [
                   {
-
-        "arn": "arn:aws:lambda:us-east-1:208622040557:function:AlexaGeneric",
                     "alexaUsage": [
                       "custom/default"
                     ],
