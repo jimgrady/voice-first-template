@@ -34,7 +34,8 @@
                 "apis": {
                   "custom": {
                     "endpoint": {
-                        "uri": "VoiceFirstDefault"
+                        "uri": "VoiceFirstDefault",
+                        "sourceDir": "lambda"
                     }
                   }
                 }
