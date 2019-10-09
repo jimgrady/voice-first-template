@@ -1,64 +1,29 @@
 {
   "deploy_settings": {
-    "local": {
-        "skill_id": "",
-        "was_cloned": false,
-        "merge": {
-                "manifest": {
-                  "apis": {
-                    "custom": {
-                      "endpoint": {
-                        "uri": "https://evil-lewis-W1AOP1.bespoken.link",
-                        "sslCertificateType": "Wildcard"
-                      }
-                    }
-                  }
-                }
-              },
-          "resources": {
-              "manifest": {
-                "eTag": ""
-              },
-              "interactionModel": {
-                "en-US": {
-                  "eTag": ""
-                }
-              }
-            }
-    },
     "voicefirst": {
       "skill_id": "",
       "was_cloned": false,
       "merge": {
-      "manifest": {
-                "apis": {
-                  "custom": {
-                    "endpoint": {
-                        "sourceDir": "lambda",
-                        "uri": "VoiceFirstDefault"
-                    }
-                  }
-                }
-              }
-      },
-      "resources": {
         "manifest": {
-          "eTag": ""
-        },
-        "lambda": [
-                  {
-                    "alexaUsage": [
-                      "custom/default"
-                    ],
-                    "handler": "index.handler",
-                    "runtime": "nodejs10.x"
-                  }
-                ],
-        "interactionModel": {
-          "en-US": {
-            "eTag": ""
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "https://evil-lewis-W1AOP1.bespoken.link",
+                "sslCertificateType": "Wildcard"
+              }
+            }
           }
         }
+      },
+      "resources": {
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ]
+            "runtime": "nodejs10.x"
+          }
+        ]
       }
     }
   }
