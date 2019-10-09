@@ -12,16 +12,29 @@ module.exports = class <%- className %> extends SkillBaseHandler {
     <% } %>
 
     process() {
+        const self = this;
+        return self.loadData()
+            .then(() => { return self.ux(); })
+    }
+
+    loadData() {
+        const self = this;
+        return Promise.resolve();
+    }
+
+    ux() {
+        const self = this;
         let updateState = <%-requestMergeState;%>;
+        let responseKey;
         <% for (let i = 0; i < conditionalResponses.length; i++) {
-            let item = conditionalResponses[i];
-            responseKey = item.responseKey; %>
-            <% if (i === 0) { %>if <% } else { %> else if <% } %>(this.stateMatches(<%-item.stateMatch %>, '<%-responseKey%>')) {
+            let item = conditionalResponses[i]; %>
+            responseKey = <%- item.responseKey; %>
+            <% if (i === 0) { %>if <% } else { %> else if <% } %>(self.stateMatches(<%-item.stateMatch %>, respnoseKey)) {
                 updateState = Object.assign(updateState, <%- mergeStates[responseKey] ? mergeStates[responseKey] : '{}' %>);
-                return this.setState(updateState)
+                return self.setState(updateState)
                     .then(() => {
-                        return this.templateRespond(
-                        '<%- responseKey %>',
+                        return self.templateRespond(
+                        responseKey,
                         null,
                         <%- endSessionMap[responseKey] %>
                     );
@@ -32,9 +45,9 @@ module.exports = class <%- className %> extends SkillBaseHandler {
         <% if (conditionalResponses.length > 0) { %> else {<% } %>
         // Default Response
             updateState = Object.assign(updateState, {'last-response-id': '<%- defaultResponseKey %>'});
-            return this.setState(updateState)
+            return self.setState(updateState)
                 .then(() => {
-                    return this.templateRespond(
+                    return self.templateRespond(
                     '<%- defaultResponseKey %>',
                     null,
                     <%- endSessionMap[defaultResponseKey] %>

@@ -16,6 +16,7 @@ const requestHandlers = {
     FallbackIntentHandler: 'voice-tools/lib/platform/alexa/handlers/FallbackIntentHandler',
     LoadTestStateIntentHandler: 'voice-tools/lib/platform/alexa/handlers/LoadTestStateIntentHandler'
 };
+
 const errorHandlers = {
     Error: 'voice-tools/lib/platform/alexa/handlers/ErrorHandler'
 };
@@ -29,6 +30,7 @@ let intents = [];
 let children = {};
 let yesHandlerGenerated = false;
 let yesResponses = [];
+//TODO: add combining of any common text response, e.g. next/back
 let noHandlerGenerated = false;
 let noResponses = [];
 let fallbackHandlerGenerated = false;
@@ -68,7 +70,7 @@ function extractSlots(template) {
 }
 
 function json(obj) {
-    return JSON.stringify(obj, null, 2);
+    return JSON.stringify(obj);
 }
 
 function rejson(str) {
@@ -208,6 +210,7 @@ async function fetchFlows() {
         } else if (requestSample === 'No') {
             intentName = 'AMAZON.NoIntent';
             handlerName = 'NoIntentHandler';
+            //TODO: make auto-merge with default intents
             if (!noHandlerGenerated) {
                 intents.push({
                     name: intentName,
