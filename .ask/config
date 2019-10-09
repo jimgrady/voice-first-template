@@ -34,7 +34,6 @@
                 "apis": {
                   "custom": {
                     "endpoint": {
-                        "uri": "VoiceFirstDefault",
                         "sourceDir": "lambda"
                     }
                   }
@@ -50,7 +49,6 @@
                     "alexaUsage": [
                       "custom/default"
                     ],
-                    "functionName": "VoiceFirstDefault",
                     "handler": "index.handler",
                     "runtime": "nodejs10.x"
                   }
