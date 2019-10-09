@@ -1,7 +1,7 @@
 {
-  "name": "dev-refnet",
+  "name": "voice-first-dev",
   "version": "0.9.0",
-  "description": "RefNet Christian Radio Development",
+  "description": "Voice First Dev",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
