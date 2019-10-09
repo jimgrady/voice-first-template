@@ -3,7 +3,6 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda"
         },
         "interfaces": []
       }
