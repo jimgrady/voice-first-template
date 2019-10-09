@@ -51,6 +51,7 @@
                       "custom/default"
                     ],
                     "functionName": "VoiceFirstDefault",
+                    "handler": "index.handler",
                     "runtime": "nodejs10.x"
                   }
                 ],
